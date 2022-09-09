@@ -21,7 +21,6 @@ int main(void)
 					putchar(z + '0');
 					if (n != 7 || m != 8 || z != 9)
 					{
-					
 						putchar(',');
 						putchar(' ');
 					}
