@@ -3,8 +3,7 @@
 
 int main(void)
 {
-	char ch;
-	char bd;
+	char ch;	
 
 	for (ch = 'a'; ch <= 'z' && ch != 'q' && ch != 'e'; ch++)
 	{
