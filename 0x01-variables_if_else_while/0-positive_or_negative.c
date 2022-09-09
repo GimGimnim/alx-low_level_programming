@@ -2,7 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 
-
+/**
+ *main
+ *great
+ */
 int main(void)
 {
 	int n;
