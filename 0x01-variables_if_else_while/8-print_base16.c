@@ -15,7 +15,7 @@ int main(void)
 		putchar(n + '0');
 	}
 
-	for (bd = 'a'; bd <= 'g'; bd++)
+	for (bd = 'a'; bd < 'g'; bd++)
 	{
 		putchar(bd);
 	}
