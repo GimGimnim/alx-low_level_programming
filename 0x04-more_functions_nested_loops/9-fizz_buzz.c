@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * main - Prints 1 to 100, muliples of 3 and 5 are replaced with Fizz and Buzz
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
