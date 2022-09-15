@@ -13,7 +13,7 @@ int main(void)
 	srand(time(0));
 	i = rand() - RAND_MAX / 2;
 
-	return (i);
+	return (int i);
 }
 void positive_or_negative(int i);
 int largest_number(int a, int b, int c);
