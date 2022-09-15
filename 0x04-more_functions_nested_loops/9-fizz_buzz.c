@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - check the code
@@ -15,25 +14,25 @@ int main(void)
 		if (i % 15 == 0)
 		{
 			printf("FizzBuzz");
-			_putchar(' ');
+			putchar(' ');
 		}
 		else if (i % 5 == 0)
 		{
 			printf("Buzz");
-			_putchar(' ');
+			putchar(' ');
 		}
 		else if (i % 3 == 0)
 		{
 			printf("Fizz");
-			_putchar(' ');
+			putchar(' ');
 		}
 		else
 		{
 			printf("%d", i);
-			_putchar(' ');
+			putchar(' ');
 		}
 	}
 
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
