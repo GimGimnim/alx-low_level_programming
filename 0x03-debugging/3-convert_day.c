@@ -8,7 +8,7 @@
 * Return: day of year
 */
 
-int convert_day(int month, int day)
+int convert_day(int month, int day, int year)
 {
     if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
     {
