@@ -9,23 +9,20 @@
 int main(void)
 {
 	int i;
-	char c;
 
-	i = 1;
-
-	while(i = 1, i < 100, i++)
+	while (i = 1, i < 100, i++)
 	{
-		if(i % 3 == 0)
+		if (i % 3 == 0)
 		{
 			_putchar('Fizz');
 			_putchar(' ');
 		}
-		else if(i % 5 == 0)
+		else if (i % 5 == 0)
 		{
 			_putchar('Buzz');
 			_putchar(' ');
 		}
-		else if(1 % 15 == 0)
+		else if (1 % 15 == 0)
 		{
 			_putchar('FizzBuzz');
 			_putchar(' ');
@@ -37,5 +34,6 @@ int main(void)
 		}
 	}
 
+	_putchar('\n');
 	return (0);
 }
