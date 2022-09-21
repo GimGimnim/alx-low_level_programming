@@ -101,7 +101,7 @@ char *carryTheOne(char *r, int j, int size_r)
 			{
 				shiftR(r, j);
 				if (size_r <= j + 1)
-					return (0);
+					return (r);
 				i++;
 				j++;
 			}
@@ -112,5 +112,5 @@ char *carryTheOne(char *r, int j, int size_r)
 
 	r[j] = '\0';
 
-	return (r);
+	return (0);
 }
