@@ -2,47 +2,46 @@
 
 /**
  * infinite_add - adds two numbers
- * @n1: first number to add
- * @n2: second number to add
+ * @n1: first number
+ * @n2: second number
  * @r: buffer for result
- * @size_r: size of r
+ * @size_r: buffer size
  *
- * Return: on success, pointer to r, otherwise 0
+ * Return: address of r or 0
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, add, dif;
-	int j = size_r;
-	int c1 = count(n1), c2 = count(n2);
+	int i, j, k, l, m, n;
 
-	if (c1 >= size_r || c2 >= size_r)
+	for (i = 0; n1[i]; i++)
+		;
+	for (j = 0; n2[j]; j++)
+		;
+	if (i > size_r || j > size_r)
 		return (0);
-	for (i = 0; i < j; i++)
+	m = 0;
+	for (i -= 1, j -= 1, k = 0; k < size_r - 1; i--, j--, k++)
 	{
-		if (c1 > c2)
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
 		{
-			j = c1;
-			dif = c1 - c2;
-			if (i < dif)
-				add = n1[i] - '0';
-			else
-				add = (n1[i] - '0') + (n2[i - dif] - '0');
+			break;
 		}
-		else if (c2 > c1)
-		{
-			j = c2;
-			dif = c2 - c1;
-			if (i < dif)
-				add = n2[i] - '0';
-			else
-				add = (n2[i] - '0') + (n1[i - dif] - '0');
-		}
-		else
-		{
-			j = c1;
-			add = (n1[i] - '0') + (n2[i] - '0');
-		}
-		r[i] = add + '0';
+		m = n / 10;
+		r[k] = n % 10 + '0';
 	}
-	return (carryTheOne(r, j, size_r));
+	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
+	{
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
+	}
+	return (r);
 }
