@@ -1,7 +1,7 @@
 #include "main.h"
 #define NULL 0
 
-**
+/**
 * _strstr - function
 * @haystack: string to search in
 * @needle: substring to find in string
