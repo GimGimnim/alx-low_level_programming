@@ -15,15 +15,15 @@ int main(int argc, char **argv)
 	int (*m)(int, char **) = &main;
 	char *p = (char *)m;
 
-  if (argc != 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
 
-  size = atoi(argv[1]);
+	size = atoi(argv[1]);
 
-  if (size < 0)
+	if (size < 0)
 	{
 		printf("Error\n");
 		exit(2);
@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 			printf(" ");
 	}
 
-  printf("\n");
+	printf("\n");
 
-  return (0);
+	return (0);
 }
